@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaio & Yasmin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom, #ffb6c1, #000);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+    .contador {
+      margin: 20px 0;
+      font-size: 1.5rem;
+    }
+    .fotos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .fotos img {
+      width: 250px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ff69b4;
+      transition: transform 0.3s;
+    }
+    .fotos img:hover {
+      transform: scale(1.05);
+    }
+    .btn-mensagem {
+      background-color: #ff69b4;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      text-shadow: 1px 1px 2px #000;
+      margin-top: 30px;
+      box-shadow: 0 0 10px #fff;
+      transition: background 0.3s;
+    }
+    .btn-mensagem:hover {
+      background-color: #ff1493;
+    }
+    .corner-img {
+      position: fixed;
+      width: 120px;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .kitty {
+      bottom: 0;
+      left: 0;
+    }
+    .spiderman {
+      bottom: 0;
+      right: 0;
+    }
+    @media (max-width: 600px) {
+      .fotos img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Kaio 💗 Yasmin</h1>
+  <div class="contador" id="contador"></div>
+  <div class="fotos">
+    <img src="assets/foto1.jpeg" alt="Foto 1">
+    <img src="assets/foto2.jpeg" alt="Foto 2">
+    <img src="assets/foto3.jpeg" alt="Foto 3">
+    <img src="assets/foto4.jpg" alt="Foto 4">
+  </div>
+  <button class="btn-mensagem" onclick="window.location.href='mensagem.html'">Mensagem Especial</button>
+  <img src="assets/hello-kitty.png" class="corner-img kitty" alt="Hello Kitty">
+  <img src="assets/spiderman.png" class="corner-img spiderman" alt="Homem-Aranha">
+  <script>
+    const startDate = new Date('2024-12-29');
+    const today = new Date();
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").textContent = `Juntos há ${diffDays} dias 💕`;
+  </script>
+</body>
+</html>
